@@ -2,7 +2,7 @@ use openssl::{error::ErrorStack, pkey::PKey, rand, rsa::Padding};
 
 use crate::Error;
 
-const STEAM_PK: &'static [u8] = include_bytes!("../steam_pk.pem");
+const STEAM_PK: &[u8] = include_bytes!("../steam_pk.pem");
 
 pub struct SessionKey {
     plain: [u8; 32],
