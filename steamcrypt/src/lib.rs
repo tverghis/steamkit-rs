@@ -1,7 +1,5 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
-}
+mod error;
+mod session_key;
+
+pub use error::{Error, ErrorKind};
+pub use session_key::SessionKey;
